@@ -3,7 +3,6 @@ import PackageDescription
 
 let package = Package(
   name: "VideoEditorSDK",
-  platforms: [.iOS(.v9)],
   dependencies: [
     .package(url: "https://github.com/sascha/imglykit-spm-test.git", .branch("main"))
   ],
