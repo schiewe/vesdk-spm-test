@@ -5,9 +5,8 @@ let package = Package(
   name: "VideoEditorSDK",
   platforms: [.iOS(.v9)],
   products: [
-    .library(
-        name: "VideoEditorSDK", 
-        targets: ["ImglyKit", "VideoEditorSDK"]),
+    .library(name: "ImglyKit", targets: ["ImglyKit"]),
+    .library(name: "VideoEditorSDK", targets: ["VideoEditorSDK"]),
   ],
   targets: [
     .binaryTarget(
