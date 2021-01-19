@@ -1,1 +1,0 @@
-# vesdk-spm-test
