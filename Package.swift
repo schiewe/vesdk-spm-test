@@ -1,19 +1,19 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
   name: "VideoEditorSDK",
-  platforms: [.iOS(.v9)],
+  platforms: [.iOS(.v13)],
   products: [
     .library(name: "VideoEditorSDK", targets: ["VideoEditorSDK"]),
   ],
   dependencies: [
-    .package(name: "ImglyKit", url: "https://github.com/schiewe/imglykit-spm-test.git", .exact("10.21.4"))
+    .package(url: "https://github.com/imgly/imglykit-sp.git", exact: "11.2.0-beta.1")
   ],
   targets: [
     .target(
       name: "VideoEditorSDK",
-      dependencies: ["ImglyKit"],
+      dependencies: [.product(name: "ImglyKit", package: "imglykit-sp")],
       path: "Source",
       publicHeadersPath: ""
     )
